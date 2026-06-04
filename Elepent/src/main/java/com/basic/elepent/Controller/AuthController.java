@@ -31,7 +31,7 @@ public class AuthController {
     }
 
 
-    @GetMapping("/login")
+    @PostMapping("/login")
     public LoginRespontDTO login(@RequestBody LoginReqestDTO loginReqestDTO) {
 
         FarmerEntity farmer = userService.findFarmerByUsername(loginReqestDTO.getUsername());
